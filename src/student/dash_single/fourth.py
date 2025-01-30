@@ -61,17 +61,30 @@ row_two = dbc.Row([
 
 
 
-# Image object in Row 3
-html.Img(src=app.get_asset_url('line-chart-placeholder.png'), alt='bar chart'),
 
 
 
+# Chart objects in Row 3
+line_chart = html.Img(src=app.get_asset_url('line-chart-placeholder.png'), className="img-fluid"),
+bar_chart = html.Img(src=app.get_asset_url('bar-chart-placeholder.png'), className="img-fluid"),
 
-# width is not necessary as it is evenly distributed between two components
+
 row_three = dbc.Row([
-    dbc.Col(children=['Line chart... now test the width of the column by adding a lot of text to see overflow']),
-    dbc.Col(children=['Bar chart... now test the width of the column by adding a lot of text to see overflow'])
+    dbc.Col(children=line_chart),
+    dbc.Col(children=bar_chart)
+    # width is not necessary as it is evenly distributed between two components
 ])
+
+
+
+# Image object row 4
+
+
+
+#  Card object row 4
+
+
+
 
 # width is necessary as components are not evenly distributed
 row_four = dbc.Row([
