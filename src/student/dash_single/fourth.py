@@ -11,7 +11,7 @@ meta_tags = [
 
 
 # Variable that contains the external_stylesheet to use, in this case Bootstrap styling from dash bootstrap components (dbc)
-external_stylesheets = [dbc.themes.CERULEAN]  # or another theme like DARKLY, CYBORG, etc.
+external_stylesheets = [dbc.themes.QUARTZ]  # or another theme like DARKLY, CYBORG, etc.
 
 
 # Pass the stylesheet and meta_tag variables to the Dash app constructor
@@ -78,18 +78,31 @@ row_three = dbc.Row([
 
 
 # Image object row 4
+djo = html.Img(src='https://external-preview.redd.it/LGnb1tF60_4GoE6xQnHW2h73h_ps-zhH5__0eeq7uoY.jpg?width=640&crop=smart&auto=webp&s=05ef0aa3d17d7e9691ebdccfc3a2732cae81381a', 
+               alt='joekeery',
+               className="img-fluid")
 
 
-
-#  Card object row 4
-
-
+# Card object row 4
+card = dbc.Card([
+    dbc.CardImg(src = 'https://m.media-amazon.com/images/I/91iKOYJ1tvL._UF894,1000_QL80_.jpg#'),
+                # app.get_asset_url("logos/2022_Beijing.jpg"), top=True),
+    dbc.CardBody([
+        html.H4("Beijing 2022", className="card-title"),
+        html.P("Number of athletes: XX", className="card-text", ),
+        html.P("Number of events: XX", className="card-text", ),
+        html.P("Number of countries: XX", className="card-text", ),
+        html.P("Number of sports: XX", className="card-text", ),
+    ]),
+],
+    style={"width": "18rem"},
+)
 
 
 # width is necessary as components are not evenly distributed
 row_four = dbc.Row([
-    dbc.Col(children=['World map... now test the width of the column by adding a lot of text to see overflow and add a little more as the width of 8 is very wide'], width=8),
-    dbc.Col(children=['Card with event info... now test the width of the column by adding a lot of text'], width=4),
+    dbc.Col(children=djo, width=8),
+    dbc.Col(children=card, width=4),
 ])
 
 row_five = dbc.Row([
