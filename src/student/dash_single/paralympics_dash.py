@@ -2,25 +2,20 @@
 from dash import Dash, html
 import dash_bootstrap_components as dbc
 
-import dash_bootstrap_components as dbc
 
-
-
-# Variable that defines the meta tag for the viewport
-# meta_tags = [
-#     {"name": "viewport", "content": "width=device-width, initial-scale=1"},
-# ]
+# Define a variable that contains the meta tags
+meta_tags = [
+    {"name": "viewport", "content": "width=device-width, initial-scale=1"},
+]
 
 
 # Variable that contains the external_stylesheet to use, in this case Bootstrap styling from dash bootstrap components (dbc)
-external_stylesheets = [dbc.themes.CYBORG]  # or another theme like DARKLY, CYBORG, etc.
+external_stylesheets = [dbc.themes.CERULEAN]  # or another theme like DARKLY, CYBORG, etc.
 
 
 # Pass the stylesheet and meta_tag variables to the Dash app constructor
 # Create an instance of the Dash app with the stylesheet and meta tag
-# app = Dash(__name__, external_stylesheets=[BS], meta_tags=meta_tags)
-app = Dash(__name__, external_stylesheets=external_stylesheets)
-
+app = Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 
 
 # Wrap the layout in a Bootstrap container
