@@ -1,6 +1,9 @@
 # 12 column layout
+import dash
 from dash import Dash, html
 import dash_bootstrap_components as dbc
+
+dash.register_page(__name__, path='/') # '/' indicates this is the home page
 
 
 # Define a variable that contains the meta tags
@@ -8,6 +11,7 @@ import dash_bootstrap_components as dbc
 meta_tags = [
     {"name": "viewport", "content": "width=device-width, initial-scale=1"},
 ]
+
 
 # Variable that contains the external_stylesheet to use, in this case Bootstrap styling from dash bootstrap components (dbc)
 external_stylesheets = [dbc.themes.QUARTZ]  # or another theme like DARKLY, CYBORG, etc.
@@ -57,10 +61,6 @@ row_two = dbc.Row([
     dbc.Col(children=drop_down, width=4),
     dbc.Col(children=check_boxes, width={"size": 4, "offset": 2}), # 2 'empty' columns between this and the previous column
 ])
-
-
-
-
 
 
 # Chart objects in Row 3
@@ -120,7 +120,7 @@ row_five = dbc.Row([
     dbc.Col('13', width=1)
 ])
 
-app.layout = dbc.Container([
+layout = dbc.Container([
     row_one,
     row_two,
     row_three,
@@ -134,4 +134,4 @@ app.layout = dbc.Container([
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True, port=5050)
+    app.run(debug=True, port=4040)

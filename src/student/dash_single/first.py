@@ -3,10 +3,6 @@ from dash import Dash, html
 import dash_bootstrap_components as dbc
 
 
-# Create an instance of the Dash app
-app = Dash(__name__)
-
-
 # CSS Stylesheet
 # Variable that defines the meta tag for the viewport
 meta_tags = [
