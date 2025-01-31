@@ -18,10 +18,10 @@ app.layout = html.Div(
             for page in dash.page_registry.values()
         ]),
         html.Hr(),
-
-        # content of each page
+        # html.H3("Djo released a third show and album"),
+        # displays content of each page; below header present in all pages
         dash.page_container
-    ]
+    ],
 )
 
 

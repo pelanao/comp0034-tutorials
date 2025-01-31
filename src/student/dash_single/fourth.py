@@ -77,15 +77,15 @@ row_three = dbc.Row([
 
 
 # Image object row 4
-djo = html.Img(src='https://external-preview.redd.it/LGnb1tF60_4GoE6xQnHW2h73h_ps-zhH5__0eeq7uoY.jpg?width=640&crop=smart&auto=webp&s=05ef0aa3d17d7e9691ebdccfc3a2732cae81381a', 
+djo = html.Img(src='https://imgix.bustle.com/uploads/image/2022/11/8/a152c8a7-f59b-446b-b326-8b520e2a85f0-1110_joekeery.jpg?w=414&h=259&fit=crop&crop=faces&dpr=2', 
                alt='joekeery',
                className="img-fluid")
 
 
 # Card object row 4
 card = dbc.Card([
-    dbc.CardImg(src = 'https://m.media-amazon.com/images/I/91iKOYJ1tvL._UF894,1000_QL80_.jpg#'),
-                # app.get_asset_url("logos/2022_Beijing.jpg"), top=True),
+    dbc.CardImg(src = #'https://m.media-amazon.com/images/I/91iKOYJ1tvL._UF894,1000_QL80_.jpg#'),
+                app.get_asset_url("logos/2022_Beijing.jpg"), top=True, className="img-fluid"),
     dbc.CardBody([
         html.H4("Beijing 2022", className="card-title"),
         html.P("Number of athletes: XX", className="card-text", ),
